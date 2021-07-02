@@ -10,10 +10,6 @@ struct jsonstruct:Decodable {
     let name:String
     let phone:String
     let username: String
-//    let address : Array<Any>
-//    let alpha2Code:String
-//    let alpha3Code:String
-////    let capital:String
     let website:String
     
 }
@@ -21,7 +17,7 @@ struct jsonstruct:Decodable {
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableview: UITableView!
-    
+
     var arrdata = [jsonstruct]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     }
         
                 }
-                
-                
-
             }
-             
             }catch{
                 print("Error in get json data")
             }
@@ -71,10 +63,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.lblname.text = "Name : \(arrdata[indexPath.row].name)"
         cell.lblPhone.text = "Phone : \(arrdata[indexPath.row].phone)"
         cell.lblwebsite.text = "Website : \(arrdata[indexPath.row].website)"
-//        cell.lblcompNAme.text = "Company Name : \(arrdata[indexPath.row].company)"
-        
+//
         return cell
     }
+    
+
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail:DetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detail") as! DetailViewController
@@ -87,6 +81,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
         
     }
+
     
     @IBAction func rightBarButtonAction(_ sender: Any) {
         print("right bar button action")
@@ -96,10 +91,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        let vc = ProfileController()
         self.navigationController?.pushViewController(vc,animated:true)
-
-
     }
 
-}
+      }
+
+
 
 
