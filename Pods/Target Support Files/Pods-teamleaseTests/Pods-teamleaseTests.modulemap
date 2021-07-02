@@ -1,0 +1,6 @@
+framework module Pods_teamleaseTests {
+  umbrella header "Pods-teamleaseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  teamlease
 //
-//  Created by Pandoo on 02/07/21.
+//  Created by Manitha on 02/07/21.
 //
 
 import UIKit
